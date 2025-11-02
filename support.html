@@ -6,6 +6,44 @@
     <title>Поддержка - Spectral Text</title>
     <meta name="description" content="Центр поддержки приложения Spectral Text. Ответы на часто задаваемые вопросы, инструкции и контакты службы поддержки.">
     <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="ru" href="support.html">
+    <link rel="alternate" hreflang="en" href="support-en.html">
+    <link rel="alternate" hreflang="zh" href="support-zh.html">
+    <style>
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .lang-switcher a {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .lang-switcher a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .lang-switcher a:not(.active) {
+            color: var(--text-color);
+        }
+        
+        .lang-switcher a:not(.active):hover {
+            background: var(--bg-light);
+        }
+        
+        @media (max-width: 768px) {
+            .lang-switcher {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
     <style>
         .page-header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -159,6 +197,13 @@
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="support.html" class="active">Поддержка</a></li>
                 <li><a href="privacy-policy.html">Конфиденциальность</a></li>
+                <li>
+                    <div class="lang-switcher">
+                        <a href="support.html" class="active" title="Русский">RU</a>
+                        <a href="support-en.html" title="English">EN</a>
+                        <a href="support-zh.html" title="中文">中文</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
