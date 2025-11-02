@@ -5,8 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Политика конфиденциальности - Spectral Text</title>
     <meta name="description" content="Политика конфиденциальности приложения Spectral Text">
-    <link rel="stylesheet" href="style.css" 
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="ru" href="privacy-policy.html">
+    <link rel="alternate" hreflang="en" href="privacy-policy-en.html">
+    <link rel="alternate" hreflang="zh" href="privacy-policy-zh.html">
+    <style>
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
         
+        .lang-switcher a {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .lang-switcher a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .lang-switcher a:not(.active) {
+            color: var(--text-color);
+        }
+        
+        .lang-switcher a:not(.active):hover {
+            background: var(--bg-light);
+        }
+        
+        @media (max-width: 768px) {
+            .lang-switcher {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+    <style>
         h1 {
             font-size: 42px;
             font-weight: 700;
@@ -193,6 +231,13 @@
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="support.html">Поддержка</a></li>
                 <li><a href="privacy-policy.html" class="active">Конфиденциальность</a></li>
+                <li>
+                    <div class="lang-switcher">
+                        <a href="privacy-policy.html" class="active" title="Русский">RU</a>
+                        <a href="privacy-policy-en.html" title="English">EN</a>
+                        <a href="privacy-policy-zh.html" title="中文">中文</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
