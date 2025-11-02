@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectral Text - Голос в текст и обратно</title>
+    <meta name="description" content="Spectral Text - современное приложение для преобразования речи в текст и работы с документами. Читайте файлы, записывайте голосовые заметки, получайте транскрипции.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero секция */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-buttons .btn {
+            padding: 18px 36px;
+            font-size: 18px;
+        }
+        
+        /* Секции */
+        section {
+            padding: 80px 20px;
+        }
+        
+        section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+        
+        section .subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Функции */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background: var(--bg-color);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Преимущества */
+        .benefits {
+            background: var(--bg-color);
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 24px;
+            padding: 32px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        
+        .benefit-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-item h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+        
+        .benefit-item p {
+            color: var(--text-secondary);
+        }
+        
+        /* CTA секция */
+        .cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+        
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            section h2 {
+                font-size: 32px;
+            }
+            
+            .feature-card {
+                padding: 32px 24px;
+            }
+            
+            .benefit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Spectral Text</a>
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="support.html">Поддержка</a></li>
+                <li><a href="privacy-policy.html">Конфиденциальность</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Spectral Text</h1>
+            <p>Голос в текст и обратно — современное приложение для работы с текстом и документами</p>
+            <div class="hero-buttons">
+                <a href="https://apps.apple.com/app/spectral-text/idXXXXX" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.greatlove.spectraltext" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                    </svg>
+                    Google Play
+                </a>
+            </div>
+            <p style="font-size: 14px; margin-top: 20px; opacity: 0.8;">
+                Ссылки будут доступны после публикации в магазинах приложений
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Возможности</h2>
+            <p class="subtitle">Все необходимое для работы с текстом и голосом в одном приложении</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Голос в текст</h3>
+                    <p>Записывайте голосовые сообщения и получайте точную транскрипцию на русском и других языках. Поддержка множества языков распознавания речи.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Чтение файлов</h3>
+                    <p>Открывайте и читайте TXT, MD, PDF файлы с удобным интерфейсом, поддержкой форматирования и историей открытых файлов.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔊</div>
+                    <h3>Озвучка текста</h3>
+                    <p>Слушайте любой текст голосом, когда глаза устали. Полный контроль: пауза, перемотка, изменение скорости и голоса.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>История и синхронизация</h3>
+                    <p>Сохраняйте транскрипции, управляйте историей записей и файлов. Все данные хранятся локально на вашем устройстве.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Современный интерфейс</h3>
+                    <p>Интуитивный дизайн, плавные анимации, тактильная обратная связь и поддержка темной темы для комфортного использования.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Конфиденциальность</h3>
+                    <p>Все данные хранятся локально на вашем устройстве. Мы не передаем ваши записи и файлы третьим лицам без вашего согласия.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>Почему Spectral Text?</h2>
+            <p class="subtitle">Преимущества, которые делают работу с текстом проще</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <div>
+                        <h3>Быстро и точно</h3>
+                        <p>Высокое качество распознавания речи благодаря использованию встроенных сервисов Apple и Google. Мгновенное преобразование голоса в текст.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">📱</div>
+                    <div>
+                        <h3>Работает оффлайн</h3>
+                        <p>Основные функции работают без интернета. Ваши данные не покидают ваше устройство, обеспечивая максимальную безопасность.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌍</div>
+                    <div>
+                        <h3>Множество языков</h3>
+                        <p>Поддержка распознавания речи на многих языках, включая русский, английский, немецкий, французский и другие.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔄</div>
+                    <div>
+                        <h3>Автоматические обновления</h3>
+                        <p>Регулярные обновления с новыми функциями и улучшениями. Обновления устанавливаются автоматически и не требуют действий от вас.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Начните использовать Spectral Text уже сегодня</h2>
+            <p>Скачайте приложение бесплатно и откройте новые возможности работы с текстом и голосом</p>
+            <div class="hero-buttons">
+                <a href="https://apps.apple.com/app/spectral-text/idXXXXX" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="background: white; color: var(--primary-color); border: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.greatlove.spectraltext" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="background: white; color: var(--primary-color); border: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                    </svg>
+                    Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h3>Spectral Text</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="support.html">Поддержка</a></li>
+                    <li><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Приложение</h3>
+                <ul>
+                    <li><a href="https://apps.apple.com/app/spectral-text/idXXXXX" target="_blank" rel="noopener noreferrer">App Store</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.greatlove.spectraltext" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Контакты</h3>
+                <ul>
+                    <li><a href="mailto:greatlovefgy@gmail.com">greatlovefgy@gmail.com</a></li>
+                    <li><a href="mailto:greatlovefgy@gmail.com">greatlovefgy@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Spectral Text. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
