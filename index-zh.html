@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectral Text - 语音转文字</title>
+    <meta name="description" content="Spectral Text - 现代化的语音转文字和文档处理应用。阅读文件、录制语音笔记、获取转录。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="ru" href="index.html">
+    <link rel="alternate" hreflang="en" href="index-en.html">
+    <link rel="alternate" hreflang="zh" href="index-zh.html">
+    <style>
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-buttons .btn {
+            padding: 18px 36px;
+            font-size: 18px;
+        }
+        
+        /* Language switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .lang-switcher a {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .lang-switcher a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .lang-switcher a:not(.active) {
+            color: var(--text-color);
+        }
+        
+        .lang-switcher a:not(.active):hover {
+            background: var(--bg-light);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 20px;
+        }
+        
+        section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+        
+        section .subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background: var(--bg-color);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        /* Benefits */
+        .benefits {
+            background: var(--bg-color);
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 24px;
+            padding: 32px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        
+        .benefit-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-item h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+        
+        .benefit-item p {
+            color: var(--text-secondary);
+        }
+        
+        /* CTA section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+        
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            section h2 {
+                font-size: 32px;
+            }
+            
+            .feature-card {
+                padding: 32px 24px;
+            }
+            
+            .benefit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .lang-switcher {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index-zh.html" class="logo">Spectral Text</a>
+            <ul>
+                <li><a href="index-zh.html" class="active">首页</a></li>
+                <li><a href="support-zh.html">支持</a></li>
+                <li><a href="privacy-policy-zh.html">隐私</a></li>
+                <li>
+                    <div class="lang-switcher">
+                        <a href="index.html" title="Русский">RU</a>
+                        <a href="index-en.html" title="English">EN</a>
+                        <a href="index-zh.html" class="active" title="中文">中文</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Spectral Text</h1>
+            <p>语音转文字 — 现代化的文本和文档处理应用</p>
+            <div class="hero-buttons">
+                <a href="https://apps.apple.com/app/spectral-text/idXXXXX" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.greatlove.spectraltext" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                    </svg>
+                    Google Play
+                </a>
+            </div>
+            <p style="font-size: 14px; margin-top: 20px; opacity: 0.8;">
+                链接将在应用商店发布后可用
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>功能</h2>
+            <p class="subtitle">在一个应用中处理文本和语音所需的一切</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>语音转文字</h3>
+                    <p>录制语音消息并获得中文和其他语言的准确转录。支持多种语音识别语言。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>文件阅读</h3>
+                    <p>使用便捷的界面打开和阅读 TXT、MD、PDF 文件，支持格式化和打开文件历史。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔊</div>
+                    <h3>文本转语音</h3>
+                    <p>当眼睛疲倦时，聆听任何文本。完全控制：暂停、快进、更改速度和语音。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>历史和同步</h3>
+                    <p>保存转录，管理录音和文件历史。所有数据都存储在您的设备本地。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>现代界面</h3>
+                    <p>直观的设计、流畅的动画、触觉反馈和暗色主题支持，提供舒适的使用体验。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>隐私保护</h3>
+                    <p>所有数据都存储在您的设备本地。未经您同意，我们不会与第三方分享您的录音和文件。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>为什么选择 Spectral Text？</h2>
+            <p class="subtitle">让文本处理更轻松的优势</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <div>
+                        <h3>快速准确</h3>
+                        <p>使用内置的 Apple 和 Google 服务，实现高质量的语音识别。即时语音转文字转换。</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">📱</div>
+                    <div>
+                        <h3>离线工作</h3>
+                        <p>核心功能无需互联网即可工作。您的数据不会离开您的设备，确保最大安全性。</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌍</div>
+                    <div>
+                        <h3>多种语言</h3>
+                        <p>支持多种语言的语音识别，包括中文、英语、俄语、德语、法语等。</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔄</div>
+                    <div>
+                        <h3>自动更新</h3>
+                        <p>定期更新，包含新功能和改进。更新会自动安装，无需您进行任何操作。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>立即开始使用 Spectral Text</h2>
+            <p>免费下载应用，探索处理文本和语音的新可能性</p>
+            <div class="hero-buttons">
+                <a href="https://apps.apple.com/app/spectral-text/idXXXXX" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="background: white; color: var(--primary-color); border: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.greatlove.spectraltext" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="background: white; color: var(--primary-color); border: none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                    </svg>
+                    Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h3>Spectral Text</h3>
+                <ul>
+                    <li><a href="index-zh.html">首页</a></li>
+                    <li><a href="support-zh.html">支持</a></li>
+                    <li><a href="privacy-policy-zh.html">隐私政策</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>应用</h3>
+                <ul>
+                    <li><a href="https://apps.apple.com/app/spectral-text/idXXXXX" target="_blank" rel="noopener noreferrer">App Store</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.greatlove.spectraltext" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>联系</h3>
+                <ul>
+                    <li><a href="mailto:greatlovefgy@gmail.com">greatlovefgy@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Spectral Text. 版权所有。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

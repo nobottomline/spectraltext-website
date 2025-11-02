@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - Spectral Text</title>
+    <meta name="description" content="Spectral Text 应用隐私政策">
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="ru" href="privacy-policy.html">
+    <link rel="alternate" hreflang="en" href="privacy-policy-en.html">
+    <link rel="alternate" hreflang="zh" href="privacy-policy-zh.html">
+    <style>
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .lang-switcher a {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .lang-switcher a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .lang-switcher a:not(.active) {
+            color: var(--text-color);
+        }
+        
+        .lang-switcher a:not(.active):hover {
+            background: var(--bg-light);
+        }
+        
+        @media (max-width: 768px) {
+            .lang-switcher {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+    <style>
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        
+        p {
+            font-size: 16px;
+            margin-bottom: 16px;
+            color: #444;
+        }
+        
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+            color: #444;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .contact-info {
+            background: #f9fafb;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+            border-left: 4px solid #6366f1;
+        }
+        
+        .contact-info strong {
+            color: #1a1a1a;
+        }
+        
+        a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+        }
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 60px 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .policy-container h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-color);
+            letter-spacing: -0.5px;
+        }
+        
+        .policy-container .last-updated {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .policy-container h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .policy-container h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        
+        .policy-container p {
+            font-size: 16px;
+            margin-bottom: 16px;
+            color: #444;
+        }
+        
+        .policy-container ul, .policy-container ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+            color: #444;
+        }
+        
+        .policy-container li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .policy-container .contact-info {
+            background: var(--bg-light);
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .policy-container .contact-info strong {
+            color: var(--text-color);
+        }
+        
+        .policy-container .section {
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 40px 20px;
+            }
+            
+            .policy-container h1 {
+                font-size: 32px;
+            }
+            
+            .policy-container h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index-zh.html" class="logo">Spectral Text</a>
+            <ul>
+                <li><a href="index-zh.html">首页</a></li>
+                <li><a href="support-zh.html">支持</a></li>
+                <li><a href="privacy-policy-zh.html" class="active">隐私</a></li>
+                <li>
+                    <div class="lang-switcher">
+                        <a href="privacy-policy.html" title="Russian">RU</a>
+                        <a href="privacy-policy-en.html" title="English">EN</a>
+                        <a href="privacy-policy-zh.html" class="active" title="中文">中文</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="policy-container">
+            <h1>隐私政策</h1>
+        <p class="last-updated">
+            <strong>最后更新日期：</strong> 2025年11月3日
+        </p>
+
+        <div class="section">
+            <h2>1. 引言</h2>
+            <p>
+                本隐私政策（"政策"）描述了 Spectral Text 应用程序（"应用"、"我们"、"我们的"）如何收集、使用、存储和保护用户信息（"用户"、"您"、"您的"）。
+            </p>
+            <p>
+                使用本应用即表示您同意本政策的条款。如果您不同意本政策的条款，请不要使用本应用。
+            </p>
+            <p>
+                我们致力于保护您的隐私，并根据适用的数据保护法律处理您的数据，包括但不限于《通用数据保护条例》（GDPR）、《加州消费者隐私法》（CCPA）以及其他适用法律。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>2. 数据控制者</h2>
+            <p>
+                您的个人数据的控制者是 Spectral Text 应用程序的开发者。 
+                要联系数据控制者，请使用本政策第14节中提供的联系信息。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>3. 收集的信息</h2>
+            <p>
+                本应用以用户隐私为优先设计。我们仅收集和处理应用功能所需的最少必要信息。
+            </p>
+
+            <h3>3.1. 自动收集的信息</h3>
+            <p>
+                本应用<strong>不会</strong>在未经您明确操作的情况下自动收集个人数据。但是，为确保某些功能的运行，应用可能会处理以下信息：
+            </p>
+            <ul>
+                <li>
+                    <strong>音频录音：</strong>使用语音转文字功能时，应用通过设备的内置麦克风录制音频。音频录音<strong>仅在您的设备上处理或传输给第三方语音识别服务</strong>以转换为文本。我们不会在我们的服务器上存储音频录音。
+                </li>
+                <li>
+                    <strong>文本转录：</strong>通过语音识别获得的文本会本地保存在您设备上的<code>transcriptions.json</code>文件中，以提供对转录历史的访问。
+                </li>
+                <li>
+                    <strong>用户文件：</strong>您在应用中打开的文件（TXT、MD、PDF 格式和其他支持的格式）会本地保存在您设备上应用的文档目录中。
+                </li>
+                <li>
+                    <strong>使用元数据：</strong>应用会本地保存有关使用会话（会话的开始和结束时间）、录音历史、打开文件历史、文件阅读设置、入门进度和使用统计的信息。所有此类数据仅存储在您的设备上。
+                </li>
+            </ul>
+
+            <h3>3.2. 我们不收集的信息</h3>
+            <p>
+                我们<strong>不收集或处理</strong>以下信息：
+            </p>
+            <ul>
+                <li>姓名、姓氏、电子邮件地址或其他识别信息（除非您明确提供）</li>
+                <li>位置（地理位置）</li>
+                <li>联系人或电话簿</li>
+                <li>您设备上其他应用的信息</li>
+                <li>应用外部的互联网活动信息</li>
+                <li>生物识别数据</li>
+                <li>财务信息</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. 数据处理的法律依据</h2>
+            <p>
+                我们在以下法律依据上处理您的数据：
+            </p>
+            <ul>
+                <li>
+                    <strong>同意：</strong>使用需要访问麦克风或文件的应用功能时，您明确同意处理相关数据以用于这些功能的目的。
+                </li>
+                <li>
+                    <strong>合同履行：</strong>数据处理是提供应用功能所必需的，符合其使用条款。
+                </li>
+                <li>
+                    <strong>合法利益：</strong>我们可以处理数据以确保安全、防止欺诈并改进应用功能，前提是此类利益不违反您的基本权利和自由。
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. 信息使用</h2>
+            <p>
+                我们仅将收集的信息用于以下目的：
+            </p>
+            <ul>
+                <li><strong>提供核心应用功能：</strong>语音转文字、文件阅读、文本转语音、保存和管理转录和文件。</li>
+                <li><strong>改善用户体验：</strong>保存设置、使用历史和用户偏好，以提供个性化体验。</li>
+                <li><strong>确保技术功能：</strong>通过 Expo Updates 服务检查应用更新，通过内置操作系统功能处理音频。</li>
+                <li><strong>遵守法律义务：</strong>适用法律要求时。</li>
+            </ul>
+            <p>
+                我们<strong>不使用</strong>您的数据用于：
+            </p>
+            <ul>
+                <li>向第三方进行营销或广告</li>
+                <li>向第三方出售您的数据</li>
+                <li>分析或创建广告档案</li>
+                <li>未经您明确同意将数据用于商业目的</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. 数据存储</h2>
+            <h3>6.1. 本地存储</h3>
+            <p>
+                应用处理的所有数据<strong>仅存储在您的设备本地</strong>，存储在以下位置：
+            </p>
+            <ul>
+                <li><strong>AsyncStorage：</strong>设置、录音历史、文件历史、使用会话、入门进度、使用统计。</li>
+                <li><strong>文件系统（文档目录）：</strong>用户文件（TXT、MD、PDF 等）、保存的转录（<code>transcriptions.json</code>文件）。</li>
+                <li><strong>缓存目录：</strong>临时文件、缓存、为共享目的创建的音频录音。</li>
+            </ul>
+            <p>
+                我们<strong>无法访问</strong>存储在您设备上的数据，也不会将此数据传输到我们的服务器或第三方服务器（第7节所述情况除外）。
+            </p>
+
+            <h3>6.2. 保留期限</h3>
+            <p>
+                数据会保存在您的设备上，直到：
+            </p>
+            <ul>
+                <li>您通过应用功能删除它</li>
+                <li>您从设备上删除应用（在这种情况下，与应用相关的所有数据会随应用一起删除）</li>
+                <li>您通过操作系统设置清除应用数据</li>
+            </ul>
+            <p>
+                我们不设置自动数据保留期限，因为所有数据都在您的控制下本地存储。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>7. 第三方数据传输</h2>
+            <p>
+                为确保应用功能，我们可能会将数据传输给以下第三方服务：
+            </p>
+
+            <h3>7.1. 语音识别服务</h3>
+            <p>
+                对于语音转文字功能，应用使用操作系统的内置语音识别服务：
+            </p>
+            <ul>
+                <li>
+                    <strong>Android：</strong>Google 语音识别 API（由 Google LLC 提供）。使用此功能时，音频数据会传输给 Google 进行处理。处理按照 Google 的<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">隐私政策</a>进行。
+                </li>
+                <li>
+                    <strong>iOS：</strong>Apple 语音识别框架（由 Apple Inc. 提供）。使用此功能时，音频数据可能会传输给 Apple 进行处理。处理按照 Apple 的<a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">隐私政策</a>进行。
+                </li>
+            </ul>
+            <p>
+                <strong>重要：</strong>我们不控制第三方语音识别服务的数据处理。我们建议在使用语音转文字功能之前查看这些服务的隐私政策。
+            </p>
+
+            <h3>7.2. 更新服务</h3>
+            <p>
+                为提供自动更新，应用使用 Expo（Expo Inc.）提供的 Expo Updates 服务，可在 <code>https://u.expo.dev</code> 访问。检查更新时，可能会将以下数据传输给服务：
+            </p>
+            <ul>
+                <li>应用项目标识符（EAS Project ID）</li>
+                <li>应用版本（运行时版本）</li>
+                <li>更新渠道</li>
+            </ul>
+            <p>
+                Expo Updates 服务的数据处理按照 Expo 的<a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">隐私政策</a>进行。
+            </p>
+
+            <h3>7.3. 文本转语音服务</h3>
+            <p>
+                对于文本转语音功能，应用使用操作系统的内置功能（文本转语音）：
+            </p>
+            <ul>
+                <li>
+                    <strong>Android：</strong>内置 Android TTS 引擎，可能使用 Google TTS 服务。数据处理按照 TTS 引擎制造商的隐私政策进行。
+                </li>
+                <li>
+                    <strong>iOS：</strong>Apple 的内置 AVSpeechSynthesizer。数据处理按照 Apple 的<a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">隐私政策</a>进行。
+                </li>
+            </ul>
+
+            <h3>7.4. 第三方数据传输的一般条件</h3>
+            <p>
+                我们仅在以下情况下将数据传输给第三方：
+            </p>
+            <ul>
+                <li>为确保应用功能所必需</li>
+                <li>第三方作为我们的数据处理器，必须遵守与本政策类似的数据处理条款</li>
+                <li>适用法律或主管当局要求传输数据</li>
+            </ul>
+            <p>
+                未经您明确同意，我们不会向第三方出售、出租或转让您的个人数据用于其自身的营销或商业目的。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>8. 设备权限</h2>
+            <p>
+                为确保功能，应用请求以下权限：
+            </p>
+
+            <h3>8.1. iOS</h3>
+            <ul>
+                <li>
+                    <strong>NSMicrophoneUsageDescription：</strong>麦克风访问对于录制语音消息并将其转录为文本是必需的。麦克风仅在用户明确操作（按下录音按钮）时激活。
+                </li>
+                <li>
+                    <strong>NSSpeechRecognitionUsageDescription：</strong>语音识别访问对于通过 Apple 语音识别框架将语音消息转换为文本是必需的。
+                </li>
+                <li>
+                    <strong>NSPhotoLibraryUsageDescription / NSPhotoLibraryAddUsageDescription：</strong>添加描述以符合某些使用的库的要求。应用不使用照片库访问来实现其功能。
+                </li>
+            </ul>
+
+            <h3>8.2. Android</h3>
+            <ul>
+                <li>
+                    <strong>RECORD_AUDIO：</strong>音频录制权限对于录制语音消息并将其转录为文本是必需的。
+                </li>
+                <li>
+                    <strong>READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE：</strong>文件读写权限对于打开用户文件（TXT、MD、PDF 等）、保存转录和文件是必需的。
+                </li>
+                <li>
+                    <strong>MODIFY_AUDIO_SETTINGS：</strong>修改音频设置的权限对于确保语音消息录制的最佳质量是必需的。
+                </li>
+            </ul>
+
+            <p>
+                所有权限<strong>仅在必要时</strong>并且在用户明确操作要求使用相应功能后才请求。您可以随时通过设备的操作系统设置撤销权限。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>9. 数据安全</h2>
+            <p>
+                我们采取合理的技术和组织措施来保护您的数据免受未经授权的访问、更改、披露或破坏：
+            </p>
+            <ul>
+                <li>
+                    <strong>本地存储：</strong>所有数据都本地存储在您的设备上，并受到操作系统内置安全机制的保护（磁盘加密、应用访问保护、应用数据隔离）。
+                </li>
+                <li>
+                    <strong>数据最小化：</strong>我们仅收集和处理确保应用功能所需的最少必要数据。
+                </li>
+                <li>
+                    <strong>无网络传输：</strong>用户个人数据（音频录音、转录、文件）不会通过网络传输到我们的服务器或第三方服务器（第7.1节所述情况除外，当数据在您的明确请求下传输给第三方语音识别服务时）。
+                </li>
+            </ul>
+            <p>
+                <strong>重要：</strong>尽管采取了安全措施，但通过互联网传输数据或电子存储数据的方法都不是100%安全的。我们无法保证您的数据绝对安全，但我们承诺使用所有合理可用的手段来保护它。
+            </p>
+            <p>
+                如果发生可能对您的权利和自由造成损害的数据泄露，我们将立即通知您和相关监管机构，符合适用法律。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>10. 您的权利</h2>
+            <p>
+                根据适用的数据保护法律，您对您的数据拥有以下权利：
+            </p>
+            <ul>
+                <li>
+                    <strong>访问权：</strong>您有权了解应用处理了哪些数据。所有数据都本地存储在您的设备上，您可以通过应用功能或直接通过设备的文件系统访问它们。
+                </li>
+                <li>
+                    <strong>更正权：</strong>您可以随时通过应用中的相应编辑功能修改或更正保存在应用中的数据。
+                </li>
+                <li>
+                    <strong>删除权：</strong>您可以通过应用中的删除功能删除保存在应用中的任何数据，或通过从设备上删除应用，这将导致所有相关数据被删除。
+                </li>
+                <li>
+                    <strong>限制处理权：</strong>您可以通过撤销操作系统设置中的相应权限来停止使用需要数据处理的应用功能。
+                </li>
+                <li>
+                    <strong>数据可移植权：</strong>您可以通过应用中的共享功能导出您的数据（转录、文件），以传输到另一个设备或存储在其他地方。
+                </li>
+                <li>
+                    <strong>反对权：</strong>您可以通过停止使用相应的应用功能或删除应用来反对处理您的数据。
+                </li>
+                <li>
+                    <strong>撤销同意权：</strong>您可以随时通过删除应用或撤销相应权限来撤销对数据处理的同意。
+                </li>
+            </ul>
+            <p>
+                要行使您的权利，您可以使用应用功能或使用第14节中提供的联系信息联系我们。我们将在合理的时间内审查您的请求，但不超过收到之日起一个月。
+            </p>
+            <p>
+                如果您认为处理您的数据违反了适用法律，您也有权向数据保护监管机构提出投诉。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>11. 儿童</h2>
+            <p>
+                本应用不适用于13岁以下的儿童（在某些司法管辖区，年龄可能不同，例如根据 GDPR，年龄为16岁）。我们不会在未经父母或法定监护人知情和同意的情况下，故意收集13岁以下儿童的个人数据。
+            </p>
+            <p>
+                如果您是父母或法定监护人，并且知道您的孩子在未经您同意的情况下向我们提供了个人数据，请使用第14节中提供的联系信息联系我们。我们将立即从我们的记录中删除此类信息（前提是它不仅仅存储在儿童设备的本地）。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>12. 隐私政策的变更</h2>
+            <p>
+                我们保留随时更新本隐私政策的权利，以反映我们在数据处理方法上的变更，或出于其他运营、法律或监管原因。
+            </p>
+            <p>
+                我们将通过以下方式通知您本政策的重大变更：
+            </p>
+            <ul>
+                <li>在本页面发布政策的更新版本</li>
+                <li>更新本政策开头的"最后更新"日期</li>
+                <li>通过应用通知（如可能）</li>
+            </ul>
+            <p>
+                我们建议您定期查看本政策，以了解我们如何保护您的数据。在发布变更后继续使用应用即表示您同意更新后的政策。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>13. 国际数据传输</h2>
+            <p>
+                由于所有数据都本地存储在您的设备上，我们不会向我们的服务器进行国际数据传输。
+            </p>
+            <p>
+                但是，使用语音识别功能时，数据可能会传输到以下国家：
+            </p>
+            <ul>
+                <li>美国（在 Android 上使用 Google 语音识别时）</li>
+                <li>美国和其他国家（在 iOS 上使用 Apple 语音识别时）</li>
+            </ul>
+            <p>
+                此类传输由第三方语音识别服务按照其隐私政策进行。我们不控制也不对这些服务的数据处理负责。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>14. 联系信息</h2>
+            <p>
+                如果您对本隐私政策或处理您的个人数据有任何问题、意见或请求，请联系我们：
+            </p>
+            <div class="contact-info">
+                <p>
+                    <strong>Spectral Text 应用程序开发者</strong><br>
+                    <strong>电子邮件：</strong> <a href="mailto:greatlovefgy@gmail.com">greatlovefgy@gmail.com</a>
+                </p>
+                <p style="margin-top: 16px; font-size: 14px; color: #666;">
+                    我们承诺在合理的时间内回复您的请求，但不超过收到之日起一个月。
+                </p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div>
+                <h3>Spectral Text</h3>
+                <ul>
+                    <li><a href="index-zh.html">首页</a></li>
+                    <li><a href="support-zh.html">支持</a></li>
+                    <li><a href="privacy-policy-zh.html">隐私政策</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>应用</h3>
+                <ul>
+                    <li><a href="https://apps.apple.com/app/spectral-text/idXXXXX" target="_blank" rel="noopener noreferrer">App Store</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.greatlove.spectraltext" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>联系</h3>
+                <ul>
+                    <li><a href="mailto:greatlovefgy@gmail.com">greatlovefgy@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Spectral Text. 版权所有。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
